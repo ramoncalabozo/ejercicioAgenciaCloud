@@ -1,0 +1,9 @@
+server:
+  port: 8761
+  
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://172.10.2.98:8761/eureka
