@@ -17,7 +17,7 @@ zuul:
       servicio-teoricopractico: # Service to create as sample
         path: /teoricopractico/** #path that will be intercepted
         serviceId: servicio-teoricopractico
-        url: http://localhost:9000      
+        url: http://localhost:8080      
 eureka:                  
   client:
     serviceUrl:
