@@ -2,7 +2,7 @@ server:
   port: 7000 #puerto del zuul service 
   
 zuul:
-  servletPath: /zuul
+  prefix: /zuul
   routes:
      servicio-teoricopractico: # Service to create as sample
      path: /teoricopractico/**
