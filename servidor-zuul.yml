@@ -1,11 +1,13 @@
 server:
   port: 7000 #puerto del zuul service 
+  
 zuul:
-  ignoredServices: '*' 
-  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+  prefix: /zuul
   routes:
      servicio-teoricopractico: # Service to create as sample
-        url: http://localhost:9000      
+     path: /teoricopractico/**
+     serviceId: servicio-teoricopractico
+     
 eureka:                  
   client:
     serviceUrl:
