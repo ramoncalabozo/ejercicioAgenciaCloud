@@ -1,29 +1,24 @@
 server:
-  port: 9000
-  
+  port: 7000 #puerto del zuul service 
+zuul:
+  ignoredServices: '*' 
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+  routes:
+      # servicio-vuelo: # Service to create as sample
+        # path: /vuelos/** #path that will be intercepted
+        # serviceId: servicio-vuelo
+        # url: http://localhost:9000
+      # servicio-hotel: # Service to create as sample
+        # path: /hoteles/** #path that will be intercepted
+        # serviceId: servicio-hotel
+      # servicio-reservas: # Service to create as sample
+        # path: /reservas/** #path that will be intercepted
+        # serviceId: servicio-reservas
+      servicio-teoricopractico: # Service to create as sample
+        path: /teoricopractico/** #path that will be intercepted
+        serviceId: servicio-teoricopractico
+        url: http://localhost:9000      
 eureka:                  
   client:
-   serviceUrl:
-    defaultZone: http://localhost:8761/eureka
-    
-        # MYSQL
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://supercomputacion.cng9pov0wudy.us-east-1.rds.amazonaws.com:3306/empleosbd?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-      username: root
-      password: ramonsqlvalladolid
-     
-     # JPA
-  jpa:
-    generate-ddl: false
-    properties: 
-      hibernate: 
-        dialect: org.hibernate.dialect.MySQLDialect
-        naming: 
-          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    show-sql: true
-
-
-
-      
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
