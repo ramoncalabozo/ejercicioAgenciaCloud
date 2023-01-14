@@ -4,16 +4,7 @@ zuul:
   ignoredServices: '*' 
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   routes:
-      # servicio-vuelo: # Service to create as sample
-        # path: /vuelos/** #path that will be intercepted
-        # serviceId: servicio-vuelo
-        # url: http://localhost:9000
-      # servicio-hotel: # Service to create as sample
-        # path: /hoteles/** #path that will be intercepted
-        # serviceId: servicio-hotel
-      # servicio-reservas: # Service to create as sample
-        # path: /reservas/** #path that will be intercepted
-        # serviceId: servicio-reservas
+     
       servicio-teoricopractico: # Service to create as sample
         path: /teoricopractico/** #path that will be intercepted
         serviceId: servicio-teoricopractico
