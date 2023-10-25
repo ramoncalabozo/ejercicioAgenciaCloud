@@ -11,7 +11,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://supercomputacion.cng9pov0wudy.us-east-1.rds.amazonaws.com:3306/teorico_practico
     username: root
-    password: ramonsqlvalladolid
+    password: ******
   jpa:
     hibernate:
       naming:
